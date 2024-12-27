@@ -5,11 +5,8 @@
     "devPath": "https://gemini.google.com/",
     "distDir": "dist"
   },
-  "package": {
-    "productName": "gemini-desktop",
-    "version": "0.1.0"
-  },
   "tauri": {
+    "identifier": "com.litongjava.tauri.gemini",
     "allowlist": {
       "all": false
     },
@@ -28,7 +25,6 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.litongjava.tauri.gemini",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
