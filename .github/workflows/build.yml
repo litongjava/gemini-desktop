@@ -17,15 +17,16 @@ jobs:
       run: |
         curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
         echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+        rustup target add x86_64-apple-darwin
     - name: Build Tauri App (x86_64)
       run: |
         cargo install tauri-cli
-        cargo tauri build
+        cargo tauri build --target x86_64-apple-darwin
     - name: Upload build artifact
       uses: actions/upload-artifact@v3
       with:
         name: gemini-desktop_0.1.0_x64.dmg
-        path: target/release/bundle/dmg/gemini-desktop_0.1.0_x64.dmg
+        path: target/x86_64-apple-darwin/release/bundle/dmg/gemini-desktop_0.1.0_x64.dmg
 
   build_macos_m2:
     runs-on: macos-latest
