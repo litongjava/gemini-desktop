@@ -1,56 +1,16 @@
 {
+  "$schema": "https://schema.tauri.app/config/2.0.0-rc",
+  "productName": "tauri-deepseek",
+  "version": "0.1.0",
+  "identifier": "com.litongjava.tauri.deepseek",
   "build": {
-    "beforeBuildCommand": "",
-    "beforeDevCommand": "",
-    "devPath": "https://gemini.google.com/",
-    "distDir": "dist"
+    "frontendDist": "dist",
+    "devUrl": "https://gemini.google.com/"
   },
-  "tauri": {
-    "identifier": "com.litongjava.tauri.gemini",
-    "allowlist": {
-      "all": false
-    },
-    "bundle": {
-      "active": true,
-      "category": "DeveloperTool",
-      "copyright": "",
-      "deb": {
-        "depends": []
-      },
-      "externalBin": [],
-      "icon": [
-        "icons/32x32.png",
-        "icons/128x128.png",
-        "icons/128x128@2x.png",
-        "icons/icon.icns",
-        "icons/icon.ico"
-      ],
-      "longDescription": "",
-      "macOS": {
-        "entitlements": null,
-        "exceptionDomain": "",
-        "frameworks": [],
-        "providerShortName": null,
-        "signingIdentity": null
-      },
-      "resources": [],
-      "shortDescription": "",
-      "targets": "all",
-      "windows": {
-        "certificateThumbprint": null,
-        "digestAlgorithm": "sha256",
-        "timestampUrl": ""
-      }
-    },
-    "security": {
-      "csp": null
-    },
-    "updater": {
-      "active": false
-    },
+  "app": {
     "windows": [
       {
-        "title": "Gemini",
+        "title": "Tauri deepseek",
         "fullscreen": false,
         "resizable": true,
         "height": 1000,
@@ -59,6 +19,20 @@
         "x": 100,
         "y": 0
       }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
     ]
   }
 }
